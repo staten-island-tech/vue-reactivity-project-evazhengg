@@ -8,3 +8,10 @@ new Vue({
   router,
   render: h => h(App)
 }).$mount('#app')
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    product: 'Socks'
+  }
+})
