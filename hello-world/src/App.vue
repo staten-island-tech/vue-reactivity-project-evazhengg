@@ -67,26 +67,24 @@ flavorName: "Popcorn",
 flavorImage: ("./assets/popcorn.jpg"),
   },
 ],
-orderTotal: [],
+
+
 }
   },
 
-methods: { 
 
 }
-  
-
 
 </script> 
 
 <style lang ="css"> 
-section {
+.sections {
   display:flex;
   flex-direction: column;
   align-items: center;
   width: 50%;
 }
-.image {
+ .image {
   width: 7rem;
   height: 7rem; 
 }
