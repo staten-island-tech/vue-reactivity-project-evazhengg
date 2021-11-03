@@ -8,18 +8,18 @@
       <div id="user-selections">
       <div id="cake-selections">
        <div class = "selections" v-for="cake in cakeChoices" :key="cake"> </div> 
-    <button> @click="updateCakes(cake)"> {{cake, cakes }} </button>
+    <button> @click="updateCakes(cake)"> {{ cake }} </button>
 
 <div id="drink-selections">
 <div class = "selections" v-for="drink in drinkChoices" :key="drink"> </div>
-<button> @click="updatedrinks (Drink)"> {{drink, drinks }} </button>
+<button> @click="updatedrinks (Drink)"> {{ drink }} </button>
       </div>
       </div>
 
 
 </section>
 
-  <section id="order-total"> 
+<section id="order-total"> 
 <h2> Amount in Cart </h2>
 <li class="info" v-for="order in order" :key="order">{{ ordered }}</li>  
 
@@ -67,13 +67,19 @@ flavorName: "Popcorn",
 flavorImage: ("./assets/popcorn.jpg"),
   },
 ],
+orderTotal: [],
 }
+  },
+
+methods: { 
+
+}
+  
 
 
 </script> 
 
-<style lang ="scss"> 
-
+<style lang ="css"> 
 section {
   display:flex;
   flex-direction: column;
@@ -84,6 +90,5 @@ section {
   width: 7rem;
   height: 7rem; 
 }
-
 
 </style>
