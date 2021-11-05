@@ -1,26 +1,25 @@
 <template>
-<div id="app">
-  <section id="user-choices">
-     <div id="user-selections">
-      <div id="cake-selections">
-        <div class = "selections" v-for="cake in cakeChoices" :key="cake">
-	      <button @click="updateOrder()"> {{ cake }} </button>
+  <div id="app"> 
+    <section id="user-choices">
+      <div id="user-selections">
+        <div id="cake-selections">
+          <div class = "selections" v-for="cake in cakeChoices" :key="cake.typeName"> </div>
+           <img class="image" :src="cake.flavorImage"> 
+        </div>
       </div>
-  </div>
   
-<div id="drink-selections" class ="selections" v-for="drink in latteChoices" :key="drink">
-  <img class="image" :src="drink.flavorImage"> 
-</div>
+    <div id="drink-selections" class ="selections" v-for="drink in latteChoices" :key="drink.flavorName">
+      <img class="image" :src="drink.flavorImage"> 
+    </div>
    
+    </section>
 
+    <section id="order-total">
+      <h2> Amount in Cart </h2>s
+      <p> {{ subtotal  }} </p>
 
-</section>
-
- <section id="order-total">
-<h2> Amount in Cart </h2>
-<p> {{ subtotal  }} </p>
-
- </section>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -69,7 +68,7 @@ export default {
 },
 methods: {
 	updateOrder() {
-		this.subtotal = subtotal++
+		this.subtotal +=1
 }
 }
 }
